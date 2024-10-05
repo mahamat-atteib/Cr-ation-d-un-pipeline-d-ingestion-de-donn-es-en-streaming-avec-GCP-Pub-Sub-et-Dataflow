@@ -21,12 +21,38 @@ file_path = /home/nouro/.. Engineer/GCP/yelp_covid_19/yelp_academic_dataset_covi
 gcloud auth activate-service-account svc2-rw@fabric-401015.iam.gserviceaccount.com --key-file=/home/xx/Data\ Engineer/GCP/fabric-401015-0990a16be511.json --project=fabric-401015
 ```
 
-## 3. Publier les données (message)  sur Pub/Sub
+## 3. Publier les données (message) sur Pub/Sub
 
+Nous allons utiliser le code python (publish_messages.py) pour transferer les données sur le topic Pub Sub
 ```
 python3.7 scripts/publish_messages.py --config_path=config/publish_config.ini
 
 ```
+Une fois l'exécution terminée, nous pouvons aller à la suscription pour voir les données stockées dans Pub/Sub. Le "message body" contient les données qui seront utilisées par le subscriber (Dataflow)pour être stockées dans BigQuery.
+![image](https://github.com/user-attachments/assets/55e267c1-4d01-4a25-9e0c-d307a9aa2571)
+
+
+## 4. Création de jobs Dataflow en streaming
+
+Nous allons utiliser le code python dans le fichier "dataflow_stream.py". Dans ce dernier, nous allons spécifier le *SCHEMA* pour la table de sortie dans BigQuery. Nous avons également créé le pipeline en utilisant Apache Beam et une fonction ParseMessage pour le traitement des données des messages dans Pub/Sub. 
+
+```
+python3 /scripts/dataflow_stream.py \
+--input_subscription=projects/fabric-401015/subscriptions/gcp-yelp-bigdata-sub \
+--output_table=test.yelp_covid --output_error_table=test.error --runner DataflowRunner \
+--project fabric-401015 --region us-west1 --service_account_email svc2-rw@fabric-401015.iam.gserviceaccount.com \
+--staging_location gs://gcs-bigdata-bucketbis/dataflow/staging --temp_location gs://gcs-bigdata-bucketbis/dataflow/temp \
+--job_name test-stream-bq --num_workers 1 --max_num_workers 2
+
+```
+
+
+
+
+
+
+
+
 
 
 
