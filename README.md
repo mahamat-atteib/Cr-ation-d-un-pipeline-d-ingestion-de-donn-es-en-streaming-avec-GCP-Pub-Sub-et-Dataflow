@@ -1,4 +1,4 @@
-# Pipeline d'ingestion de donnes depuis une-machine-locale-vers-le-stockage-GCP
+# Création d'un pipeline d'ingestion de données en streaming avec GCP Pub/Sub et Dataflow 
 
 
 
