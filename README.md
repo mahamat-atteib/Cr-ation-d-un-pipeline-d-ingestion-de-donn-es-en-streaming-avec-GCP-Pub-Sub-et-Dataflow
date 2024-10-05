@@ -51,6 +51,10 @@ Une fois ce job (pipeline) lancé, nos messages ou données seront traités et s
 
 ![image](https://github.com/user-attachments/assets/f82a9617-af06-4c60-9d41-ec0ced768c0a)
 
+À la fin de l'exécution du job, nous pouvons également visualiser le diagramme du pipeline montrant les différentes parties du pipeline avec DataFlow.
+
+![image](https://github.com/user-attachments/assets/7f629093-3cab-4d9b-b0f7-b273b0192b79)
+
 
 
 
