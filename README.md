@@ -17,7 +17,7 @@ Par la suite, il faut créer un topic pour communiquer des messages sur Pub/Sub.
 project_id =fabric-401015 #project name
 topic_id = gcp-yelp-bigdata #topicid
 credentials_path = /home/../Data Engineer/GCP/fabric-401015-0990a16be511.json #keyforserviceaccount
-file_path = /home/nouro/.. Engineer/GCP/yelp_covid_19/yelp_academic_dataset_covid_features.json #datatotransfert
+file_path = /home/.. Engineer/GCP/yelp_covid_19/yelp_academic_dataset_covid_features.json #datatotransfert
 ## activating services
 gcloud auth activate-service-account svc2-rw@fabric-401015.iam.gserviceaccount.com --key-file=/home/xx/Data\ Engineer/GCP/fabric-401015-0990a16be511.json --project=fabric-401015
 ```
