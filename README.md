@@ -47,8 +47,9 @@ python3 /scripts/dataflow_stream.py \
 ```
 
 
+Une fois ce job (pipeline) lancé, nos messages ou données seront traités et stockés dans BigQuery. Voici un exemple de requêtes sur la table yield_covid creée sur BigQuery.
 
-
+![image](https://github.com/user-attachments/assets/f82a9617-af06-4c60-9d41-ec0ced768c0a)
 
 
 
