@@ -1,5 +1,6 @@
 # Création d'un pipeline d'ingestion de données en streaming avec GCP Pub/Sub et Dataflow 
 
+Nous allons mettre en place un pipeline d'ingestion de données en streaming étape par étape. Nous utiliserons le Yelp Academic Dataset COVID au format JSON (https://www.kaggle.com/datasets/claudiadodge/yelp-academic-data-set-covid-features/) comme flux de données
 
 
 ## 1. Création de Pub/Sub sur GCP
