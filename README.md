@@ -10,4 +10,12 @@ Par la suite, il faut créer un topic pour communiquer des messages sur Pub/Sub.
 
 ![image](https://github.com/user-attachments/assets/fbe2c707-d20a-4040-bc07-4ac1e6da0fd4)
 
+## 2. Configuration et activation des services accounts gcp
+
+```[gcp]
+project_id =fabric-401015 #project name
+topic_id = gcp-yelp-bigdata #topicid
+credentials_path = /home/../Data Engineer/GCP/fabric-401015-0990a16be511.json #keyforserviceaccount
+file_path = /home/nouro/.. Engineer/GCP/yelp_covid_19/yelp_academic_dataset_covid_features.json #datatotransfert
+```
 
